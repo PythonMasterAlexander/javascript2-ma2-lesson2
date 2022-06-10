@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  --margin-size: 25px;
+  --center-align-on-page: var(--margin-size) auto;
+}
+
+main .main {
+  margin: var(--center-align-on-page);
+  width: 90%;
+}
+
+footer .footer {
+  flex-shrink: 0;
+}
+
+.page-wrapper {
+  flex: 1 0 auto;
+}
+
+.footer__section--align-center {
+  margin: var(--center-align-on-page);
+  width: fit-content;
+}
