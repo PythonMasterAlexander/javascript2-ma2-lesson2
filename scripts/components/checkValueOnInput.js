@@ -1,5 +1,27 @@
-import { inputHtmlElement } from "../constants/constants.js";
+import { inputHtmlElement, orderedListContainer } from "../constants/constants.js";
+import { arrOfAddedListItems } from "../constants/arrOfAddedListItems.js";
+import { createList } from "./createList.js";
+import { addClass } from "./addClass.js";
 
-export const checkValueOnInput = function() {
-  console.log(inputHtmlElement.value);
+const checkValueOnInput = function() {
+  let inputFieldStringValue = inputHtmlElement.value.trim();
+
+  orderedListContainer.innerHTML = "";
+
+  if(inputFieldStringValue.length >= 3) {
+    arrOfAddedListItems.push(inputFieldStringValue);
+
+    arrOfAddedListItems.forEach(function(listItem) {
+      orderedListContainer.innerHTML += createList(listItem);
+    });
+  }
+  const listItems = document.querySelectorAll('.list__item');
+  listItems.forEach(function(listItem) {
+      
+    listItem.addEventListener("click", addClass);
+  });
+
+  inputHtmlElement.value = ""
 };
+
+export default checkValueOnInput;

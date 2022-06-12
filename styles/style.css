@@ -28,6 +28,8 @@ body {
   --center-align-on-page: var(--margin-size) auto;
   --button-color: hsla(225, 100%, 50%, 1);
   --white-text-color: hsla(360, 100%, 100%, 1);
+  --box-shadow-effect: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --color-red: hsla(360, 100%, 44%, 1);
 }
 
 h1, h2, h3 {
@@ -55,7 +57,7 @@ label {
 }
 
 input {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-effect);
   height: 30px;
 }
 
@@ -65,9 +67,8 @@ button {
   padding: 8px;
 }
 
-main .main {
-  margin: var(--center-align-on-page);
-  width: 90%;
+li {
+  list-style-type: number;
 }
 
 footer .footer {
@@ -78,9 +79,18 @@ footer .footer {
   flex: 1 0 auto;
 }
 
-.main__input-section {
+.complete {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-red);
+}
+
+.main {
   margin: var(--center-align-on-page);
   width: fit-content;
+}
+
+.main__ordered-list {
+  margin: var(--margin-size) 0;
 }
 
 .footer__section--align-center {
