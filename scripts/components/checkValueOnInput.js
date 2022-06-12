@@ -22,6 +22,7 @@ const checkValueOnInput = function() {
   });
 
   inputHtmlElement.value = ""
+  inputHtmlElement.focus();
 };
 
 export default checkValueOnInput;

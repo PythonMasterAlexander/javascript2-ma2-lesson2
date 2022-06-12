@@ -61,6 +61,12 @@ input {
   height: 30px;
 }
 
+input:focus {
+  outline: none !important;
+  border-color: #719ECE;
+  box-shadow: 0 0 10px #719ECE;
+}
+
 button {
   background-color: var(--button-color);
   color: var(--white-text-color);
@@ -69,6 +75,11 @@ button {
 
 li {
   list-style-type: number;
+  cursor: pointer;
+}
+
+span {
+  padding-right: 10px;
 }
 
 footer .footer {
