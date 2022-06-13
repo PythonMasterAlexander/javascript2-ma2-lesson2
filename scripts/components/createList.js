@@ -4,7 +4,7 @@ export const createList = function(item) {
   listHtml = `
     <li>
       <span class="list__item">${item}</span>
-      <i class="fa-solid fa-trash"></i>
+      <i class="fa-solid fa-trash" data-item="${item}"></i>
     </li>
   `;
   return listHtml;
