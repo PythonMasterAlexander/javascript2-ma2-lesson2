@@ -15,9 +15,10 @@ const checkValueOnInput = function() {
       orderedListContainer.innerHTML += createList(listItem);
     });
   }
+
   const listItems = document.querySelectorAll('.list__item');
   listItems.forEach(function(listItem) {
-      
+
     listItem.addEventListener("click", addClass);
   });
 
