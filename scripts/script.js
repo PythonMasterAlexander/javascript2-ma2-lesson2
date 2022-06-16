@@ -27,15 +27,21 @@ let users = [
   }
 ];
 
-const filterUsersArr = function(user) {
-  if(user.name !== 'Emma') {
+//This function I had some problems understanding, try doing it some more times
+console.log(users)
+const removeSearchOnUsers = function(checkIdAndRemove) {
+  const filterIdOnUser = function(user) {
+    if(user.id !== checkIdAndRemove) {
+      return true;
+    }
+  };
+  const newFilteredUsers = users.filter(filterIdOnUser);
 
-    return true;
-  }
+  users =  newFilteredUsers;
 };
+removeSearchOnUsers(1);
+console.log(users);
 
-const useFilterOnInputValue = users.filter(filterUsersArr);
-users = useFilterOnInputValue;
 
 
 for(let i = 0; i < users.length; i++) {
