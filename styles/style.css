@@ -74,8 +74,8 @@ button {
 }
 
 li {
-  list-style-type: number;
   cursor: pointer;
+  margin: var(--margin-size) 0;
 }
 
 span {
@@ -100,7 +100,7 @@ footer .footer {
   width: fit-content;
 }
 
-.main__ordered-list {
+.unorderd-list-section {
   margin: var(--margin-size) 0;
 }
 
