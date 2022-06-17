@@ -6,6 +6,9 @@ unorderedListContainer.innerHTML = "";
 
 buttonElement.addEventListener('click', removeSearchOnUsers(parseInt(inputElement.value)));
 
+inputElement.value = "";
+inputElement.focus();
+
 for(let i = 0; i < users.length; i++) {
   const userName = users[i].name;
   const userId = users[i].id;
