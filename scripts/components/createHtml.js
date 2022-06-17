@@ -5,6 +5,7 @@ export const createHtml = function(name, id, gender) {
     <li>
       <h2 data-id="${id}">${name}</h2>
       <span>${gender}</span>
+      <span>User id: ${id}</span>
     </li>
   `;
 
