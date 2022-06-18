@@ -2,7 +2,7 @@ import { inputHtmlElement } from "../constants/constants.js";
 import { createList, listItemsStored } from "./createList.js";
 
 
-export const generateListFromInputValue = function() {
+const generateListFromInputValue = function() {
   const inputValue = inputHtmlElement.value.trim();
 
   if(inputValue.length >= 3) {
@@ -14,3 +14,5 @@ export const generateListFromInputValue = function() {
     inputHtmlElement.focus();
   }
 };
+
+export default generateListFromInputValue;

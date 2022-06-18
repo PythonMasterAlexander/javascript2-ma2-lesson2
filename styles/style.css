@@ -101,7 +101,8 @@ footer .footer {
 }
 
 .main__ordered-list {
-  margin: var(--margin-size) 0;
+  width: 88%;
+  margin: var(--margin-size) auto;
 }
 
 .footer__section--align-center {
