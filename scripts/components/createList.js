@@ -17,4 +17,23 @@ export const createList = function() {
   for(let i = 0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', addClass);
   }
+
+  const trashCans = document.querySelectorAll('.fa-solid');
+  for(let i = 0; i < trashCans.length; i++) {
+
+    trashCans[i].addEventListener('click', removeListItem);
+  }
+};
+
+const removeListItem = function() {
+  const dataItem = event.target.dataset.item;
+
+  const newList = listItemsStored.filter(function(trashCan) {
+    if(dataItem !== trashCan) {
+      return true;
+    }
+  });
+  listItemsStored = newList;
+
+  createList();
 };
