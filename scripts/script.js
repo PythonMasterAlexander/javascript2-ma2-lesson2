@@ -1,22 +1,34 @@
-import { inputElement, buttonElement, unorderedListContainer } from "./constants/constants.js";
+//TODO Imports
+import { buttonHtmlElement, inputHtmlElement, listItemsContainer } from "./constants/constants.js";
 import { createHtml } from "./components/createHtml.js";
-import { users, removeSearchOnUsers } from "./components/removeSearchOnUsers.js";
 
-unorderedListContainer.innerHTML = "";
+let users = [
+  { id: 1, name: "Emma", gender: "Female" },
+  { id: 2, name: "Oscar", gender: "Male" },
+  { id: 3, name: "Alexis", gender: "Female" },
+  { id: 4, name: "Adam", gender: "Male" },
+];
 
-buttonElement.addEventListener('click', removeSearchOnUsers(parseInt(inputElement.value.trim())));
+//TODO Create one function. One for generating the list and removing the list when pushing the button
+const generateList = function() {
+  const inputValue = inputHtmlElement.value.trim();
+  console.log(inputValue);
+};
 
-inputElement.value = "";
-inputElement.focus();
+//TODO Create one function. One for creating the list
+const createList = function() {
+  listItemsContainer.innerHTML = ""
 
-for(let i = 0; i < users.length; i++) {
-  const userName = users[i].name;
-  const userId = users[i].id;
-  const userGender = users[i].gender;
+  for(let i = 0; i < users.length; i++) {
+    const id = users[i].id;
+    const name = users[i].name;
+    const gender = users[i].gender;
 
-  unorderedListContainer.innerHTML += createHtml(userName, userId, userGender);
-}
+    listItemsContainer.innerHTML += createHtml(id, name, gender);
+  }
+};
 
-//loop over old array
-//when a list item is removed push the removed item to another list and loop over the old list
-//Try to push users to a new list
+createList();
+
+//TODO Call an eventListener on the button element
+buttonHtmlElement.addEventListener('click', generateList);

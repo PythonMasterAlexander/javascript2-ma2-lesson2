@@ -1,13 +1,14 @@
-export const createHtml = function(name, id, gender) {
+//TODO Create one function. One for creating html to use in the generating function
+export const createHtml = function(id, name, gender) {
   let html = "";
 
   html = `
     <li>
-      <h2 data-id="${id}">${name}</h2>
+      <h2>${name}</h2>
       <span>${gender}</span>
-      <span>User id: ${id}</span>
+      <span>${id}</span>
     </li>
   `;
 
   return html;
-}; 
+};
