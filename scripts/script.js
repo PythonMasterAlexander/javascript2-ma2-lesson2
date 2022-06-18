@@ -1,5 +1,4 @@
-import checkValueOnInput from "./components/checkValueOnInput.js";
 import { buttonHtmlElement } from "./constants/constants.js";
-import { addClass } from "./components/addClass.js";
+import { generateListFromInputValue } from "./components/generateListFromInputValue.js";
 
-buttonHtmlElement.addEventListener("click", checkValueOnInput);
+buttonHtmlElement.addEventListener('click', generateListFromInputValue);
