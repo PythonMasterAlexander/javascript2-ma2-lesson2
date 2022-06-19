@@ -1,6 +1,7 @@
 import { orderedListContainer } from "../constants/constants.js";
 import { createHtml } from "./createHtml.js";
 import { addClass } from "./addClass.js";
+import { listKey } from "./saveInLocalStorage.js";
 
 export let listItemsStored = [];
 
@@ -36,4 +37,16 @@ const removeListItem = function() {
   listItemsStored = newList;
 
   createList();
+};
+
+const getValueInLocalStorage = function() {
+  const valueInLocalStorage = localStorage.getItem(listKey);
+
+  //Check to see if there is nothing in the localStorage, same as writing valueInLocalStorage === null
+  if(!valueInLocalStorage) {
+    return [];
+  }
+
+  //This parse the value in localStorage into a value 
+  return JSON.parse(valueInLocalStorage);
 };
