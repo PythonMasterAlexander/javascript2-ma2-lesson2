@@ -1,6 +1,7 @@
 import { inputHtmlElement, buttonHtmlElement, orderedListElement } from "./constants/constants.js";
 
-let lengthOfInputValue = 3;
+const lengthOfInputValue = 3;
+const listKey = "list";
 let listItemStorage = [];
 
 const generateListFromInput = function() {
@@ -9,6 +10,7 @@ const generateListFromInput = function() {
   if(valueInInput.length >= lengthOfInputValue) {
     listItemStorage.push(valueInInput);
     createList();
+    saveToLocalStorage(valueInInput);
 
     inputHtmlElement.value = "";
     inputHtmlElement.focus();
@@ -61,10 +63,18 @@ const removeItemInList = function() {
   createList();
 };
 
-const saveToLocalStorage = function() {
+const saveToLocalStorage = function(itemInLocalStorage) {
+  localStorage.setItem(listKey, JSON.stringify(itemInLocalStorage));
 };
 
 const getListItemsFromLocalStorage = function() {
+  const getItemInLocalStorage = localStorage.getItem(listKey);
+  
+  if(!getItemInLocalStorage) {
+    return [];
+  } else {
+    return JSON.parse(getItemInLocalStorage);
+  }
 };
 
 buttonHtmlElement.addEventListener('click', generateListFromInput);
