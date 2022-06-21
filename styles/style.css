@@ -63,7 +63,7 @@ input {
 
 input:focus {
   outline: none !important;
-  border-color: #719ECE;
+  border-color: #719ece;
   box-shadow: 0 0 10px #719ECE;
 }
 
@@ -74,8 +74,8 @@ button {
 }
 
 li {
-  list-style-type: number;
   cursor: pointer;
+  margin: var(--margin-size) 0;
 }
 
 span {
@@ -96,16 +96,6 @@ footer .footer {
 }
 
 .main {
-  margin: var(--center-align-on-page);
-  width: fit-content;
-}
-
-.main__ordered-list {
-  width: 88%;
-  margin: var(--margin-size) auto;
-}
-
-.footer__section--align-center {
   margin: var(--center-align-on-page);
   width: fit-content;
 }

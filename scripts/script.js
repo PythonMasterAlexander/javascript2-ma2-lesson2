@@ -6,6 +6,4 @@ let users = [
   { id: 4, name: "Adam", gender: "Male" },
 ];
 
-//TODO get the code in lesson 2 right
-
-
+//Get the code in lesson 2 right
