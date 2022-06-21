@@ -6,13 +6,4 @@ let users = [
   { id: 4, name: "Adam", gender: "Male" },
 ];
 
-//TODO Create one function. One for generating the list 
-
-//TODO Create one function. One for creating the list
-
-//TODO Create one function. Toggle class on a list element when click the text
-
-//TODO Create one function. For removing the element when the user write the id in the input field
-//and then click the remove button
-
-//TODO Call an eventListener on the button element
+//TODO get the code in lesson 2 right
